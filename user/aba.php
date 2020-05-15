@@ -1,0 +1,18 @@
+<?php
+include_once('../file/database.php');
+$conn=login123();
+$q1=("CREATE TABLE tth.student ( no INT(250) NOT NULL AUTO_INCREMENT ,  name VARCHAR(250) NOT NULL ,  name2 VARCHAR(250) NOT NULL ,  name3 VARCHAR(250) NOT NULL ,  phno VARCHAR(250) NOT NULL ,  bach VARCHAR(250) NOT NULL ,  point INT(250) NOT NULL ,    PRIMARY KEY  (no)) ENGINE = InnoDB;");
+$q2=("CREATE TABLE tth.answer ( no INT(250) NOT NULL AUTO_INCREMENT ,  q1 VARCHAR(250) NOT NULL ,  q2 VARCHAR(250) NOT NULL ,  q3 VARCHAR(250) NOT NULL ,  q4 VARCHAR(250) NOT NULL ,  q5 VARCHAR(250) NOT NULL ,  q6 VARCHAR(250) NOT NULL ,  q7 VARCHAR(250) NOT NULL ,  q8 VARCHAR(250) NOT NULL ,  q9 VARCHAR(250) NOT NULL ,  q10 VARCHAR(250) NOT NULL ,    PRIMARY KEY  (no)) ENGINE = InnoDB;");
+$q3=("CREATE TABLE tth.time ( phno VARCHAR(250) NOT NULL ,  t1 VARCHAR(250) NOT NULL ,  t2 VARCHAR(250) NOT NULL ,  t3 VARCHAR(250) NOT NULL ,  t4 VARCHAR(250) NOT NULL ,  t5 VARCHAR(250) NOT NULL ,  t6 VARCHAR(250) NOT NULL ,  t7 VARCHAR(250) NOT NULL ,  t8 VARCHAR(250) NOT NULL ,  t9 VARCHAR(250) NOT NULL ,  t10 VARCHAR(250) NOT NULL ) ENGINE = InnoDB;");
+if(mysqli_query($conn,$q1));
+{
+		if(mysqli_query($conn,$q2))
+		{
+			if(mysqli_query($conn,$q3))
+			{
+			echo "hi";
+			}
+
+		}
+}
+?>
